@@ -82,17 +82,19 @@ export function DashboardShell({ user }: DashboardShellProps) {
   }
 
   return (
-    <main className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-      <section className="glass-panel relative overflow-hidden p-6 sm:p-8">
+    <main className="grid gap-6 text-ink lg:grid-cols-[0.92fr_1.08fr]">
+      <section className="glass-panel relative overflow-hidden p-6 text-ink sm:p-8">
         <div className="hero-orb right-[-2rem] top-[-2rem] h-32 w-32 bg-orange-200" />
         <div className="flex items-start justify-between gap-4">
           <div>
             <span className="badge">Workspace overview</span>
-            <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{user.name}</h1>
-            <p className="mt-2 max-w-md text-sm leading-7 text-slate-500">
+            <h1 className="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">
+              {user.name}
+            </h1>
+            <p className="mt-2 max-w-md text-sm leading-7 text-slate-700">
               Your shared spending command center for trips, homes, and team outings.
             </p>
-            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-400">{user.email}</p>
+            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-600">{user.email}</p>
           </div>
           <button className="button-secondary" onClick={handleLogout}>
             Log out
@@ -114,7 +116,7 @@ export function DashboardShell({ user }: DashboardShellProps) {
         <form className="mt-8 rounded-[30px] border border-white/55 bg-white/60 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]" onSubmit={handleCreateGroup}>
           <div>
             <h2 className="text-xl font-bold text-ink">Create a polished new group</h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-700">
               Start a trip, a house budget, or a running team tab.
             </p>
           </div>
@@ -152,11 +154,11 @@ export function DashboardShell({ user }: DashboardShellProps) {
         </form>
       </section>
 
-      <section className="panel p-6 sm:p-8">
+      <section className="panel p-6 text-ink sm:p-8">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-black tracking-tight">Your groups</h2>
-            <p className="mt-2 text-sm text-slate-500">
+            <h2 className="text-2xl font-black tracking-tight text-ink">Your groups</h2>
+            <p className="mt-2 text-sm text-slate-700">
               Organized cards, resilient states, and instant access to active ledgers.
             </p>
           </div>
@@ -201,13 +203,13 @@ export function DashboardShell({ user }: DashboardShellProps) {
                     <h3 className="text-lg font-bold text-ink transition group-hover:text-slate-900">
                       {group.name}
                     </h3>
-                    <p className="mt-2 text-sm text-slate-500">
+                    <p className="mt-2 text-sm text-slate-700">
                       {group.description || "No description added yet."}
                     </p>
                   </div>
                   <span className="badge">{group.memberCount} members</span>
                 </div>
-                <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
+                <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-800">
                   <span className="rounded-full bg-slate-100 px-3 py-1">Rs {group.totalSpent.toFixed(0)} spent</span>
                   <span className="rounded-full bg-slate-100 px-3 py-1">{group.expenseCount} expenses</span>
                 </div>
@@ -223,7 +225,7 @@ export function DashboardShell({ user }: DashboardShellProps) {
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
     <div className="metric-chip">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-700">{label}</p>
       <p className="mt-2 text-2xl font-black text-ink">{value}</p>
     </div>
   );

@@ -59,23 +59,23 @@ export default async function HomePage() {
           </div>
 
           <div className="relative z-10 animate-rise [animation-delay:120ms]">
-            <div className="grid-sheen overflow-hidden rounded-[36px] border border-white/50 bg-[linear-gradient(160deg,#142438,#1f3551_55%,#0f766e)] p-6 text-white shadow-[0_28px_70px_rgba(19,34,56,0.25)] sm:p-8">
+            <div className="grid-sheen overflow-hidden rounded-[36px] border border-white/50 bg-[linear-gradient(160deg,#142438,#1f3551_55%,#0f766e)] p-6 text-black shadow-[0_28px_70px_rgba(19,34,56,0.25)] sm:p-8">
               <div className="flex items-start justify-between gap-4">
                 <LogoMark compact className="text-white" />
-                <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
+                <span className="rounded-full border border-white/20 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-black">
                   Live ledger
                 </span>
               </div>
-              <div className="mt-8 rounded-[28px] border border-white/10 bg-white/10 p-5">
-                <p className="text-sm uppercase tracking-[0.2em] text-white/55">Active group</p>
+              <div className="mt-8 rounded-[28px] border border-white/20 bg-white/85 p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-700">Active group</p>
                 <div className="mt-4 flex items-center justify-between">
                   <div>
                     <p className="text-2xl font-black">Goa Escape 2026</p>
-                    <p className="mt-1 text-sm text-white/65">4 members | 11 expenses</p>
+                    <p className="mt-1 text-sm text-slate-700">4 members | 11 expenses</p>
                   </div>
-                  <p className="text-right text-sm text-white/65">
+                  <p className="text-right text-sm text-slate-700">
                     Total tracked
-                    <span className="mt-1 block text-2xl font-black text-white">Rs 28,640</span>
+                    <span className="mt-1 block text-2xl font-black text-black">Rs 28,640</span>
                   </p>
                 </div>
               </div>
@@ -90,19 +90,19 @@ export default async function HomePage() {
                 {highlights.map((item) => (
                   <div
                     key={item}
-                    className="rounded-[24px] border border-white/10 bg-white/10 px-4 py-4 text-sm leading-6 text-white/85"
+                    className="rounded-[24px] border border-white/20 bg-white/85 px-4 py-4 text-sm leading-6 text-black"
                   >
                     {item}
                   </div>
                 ))}
               </div>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-[24px] bg-white/10 px-4 py-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/55">Fastest action</p>
+                <div className="rounded-[24px] bg-white/85 px-4 py-4 text-black">
+                  <p className="text-xs uppercase tracking-[0.18em] text-slate-700">Fastest action</p>
                   <p className="mt-2 text-lg font-bold">Create group in under 30 seconds</p>
                 </div>
-                <div className="rounded-[24px] bg-white/10 px-4 py-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/55">Confidence layer</p>
+                <div className="rounded-[24px] bg-white/85 px-4 py-4 text-black">
+                  <p className="text-xs uppercase tracking-[0.18em] text-slate-700">Confidence layer</p>
                   <p className="mt-2 text-lg font-bold">Retry, dedupe, and resilient states built in</p>
                 </div>
               </div>
